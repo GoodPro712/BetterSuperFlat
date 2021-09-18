@@ -14,7 +14,3 @@ In the `server.properties` change `level-type=default` to `level-type=bettersupe
   #### Floor pattern in every dimension:
   ![floor](screenshots/Floor.png?raw=true "Floor")
 
-#### Problems:
-- Currently doesnt change the gamerules to default to good ones
-- Player spawns at y63 not y1
-- Everything below y 63 is dark because of the sea level is as in vanilla
