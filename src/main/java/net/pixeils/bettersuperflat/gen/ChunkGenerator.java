@@ -87,7 +87,7 @@ public class ChunkGenerator extends NoiseChunkGenerator {
                     region.getCenterPos().getStartX(),
                     region.getHeight() - 256,
                     region.getCenterPos().getStartZ());
-            generateSpawnPlatformInBox(
+            generateChunkFloor(
                     region,
                     pos,
                     new BlockBox(
@@ -160,37 +160,19 @@ public class ChunkGenerator extends NoiseChunkGenerator {
         }
     }
 
-    protected static void generateSpawnPlatformInBox(ServerWorldAccess world, BlockPos pos, BlockBox box) {
+    protected static void generateChunkFloor(ServerWorldAccess world, BlockPos pos, BlockBox box) {
         fillRelativeBlockInBox(
-                world, Blocks.LIGHT_GRAY_STAINED_GLASS.getDefaultState(), pos, 1,0,1,14,0,14,box);
+                world, Blocks.WHITE_CONCRETE.getDefaultState(), pos, 1,0,1,14,0,14,box);
         fillRelativeBlockInBox(
-                world, Blocks.WHITE_STAINED_GLASS.getDefaultState(), pos, 1,0,0,15,0,0,box);
+                world, Blocks.CYAN_TERRACOTTA.getDefaultState(), pos, 1,0,0,15,0,0,box);
         fillRelativeBlockInBox(
-                world, Blocks.WHITE_STAINED_GLASS.getDefaultState(), pos, 0,0,0,0,0,15,box);
+                world, Blocks.CYAN_TERRACOTTA.getDefaultState(), pos, 0,0,0,0,0,15,box);
         fillRelativeBlockInBox(
-                world, Blocks.WHITE_STAINED_GLASS.getDefaultState(), pos, 15,0,1,15,0,15,box);
+                world, Blocks.CYAN_TERRACOTTA.getDefaultState(), pos, 15,0,1,15,0,15,box);
         fillRelativeBlockInBox(
-                world, Blocks.WHITE_STAINED_GLASS.getDefaultState(), pos, 1,0,15,14,0,15,box);
+                world, Blocks.CYAN_TERRACOTTA.getDefaultState(), pos, 1,0,15,14,0,15,box);
+        fillRelativeBlockInBox(
+                world, Blocks.WHITE_STAINED_GLASS.getDefaultState(), pos, 0,1,0,15,1,15,box);
 
     }
 }
-/*
-    // generate chunk outlines
-    protected static void generateSpawnPlatformInBox(ServerWorldAccess world, BlockPos pos, BlockBox box) {
-        fillRelativeBlockInBox(
-                world, Blocks.LIGHT_GRAY_STAINED_GLASS.getDefaultState(), pos, 1,0,1,14,0,14,box);
-        fillRelativeBlockInBox(
-                world, Blocks.WHITE_STAINED_GLASS.getDefaultState(), pos, 1,0,0,15,0,0,box);
-        fillRelativeBlockInBox(
-                world, Blocks.WHITE_STAINED_GLASS.getDefaultState(), pos, 0,0,0,0,0,15,box);
-        fillRelativeBlockInBox(
-                world, Blocks.WHITE_STAINED_GLASS.getDefaultState(), pos, 15,0,1,15,0,15,box);
-        fillRelativeBlockInBox(
-                world, Blocks.WHITE_STAINED_GLASS.getDefaultState(), pos, 1,0,15,14,0,15,box);
-
-    }
- protected static void generateSpawnPlatformInBox(ServerWorldAccess world, BlockPos pos, BlockBox box) {
-        fillRelativeBlockInBox(
-            world, Blocks.WHITE_STAINED_GLASS.getDefaultState(), pos, 0,0,0,15,0,15,box);
-    }
-*/
