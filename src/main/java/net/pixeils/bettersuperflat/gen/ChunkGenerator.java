@@ -81,7 +81,7 @@ public class ChunkGenerator extends NoiseChunkGenerator {
     public void buildSurface(ChunkRegion region, Chunk chunk) {
         Arrays.fill(chunk.getSectionArray(), WorldChunk.EMPTY_SECTION);
 
-        if (region.getDimension().isNatural()) {
+
             BlockPos pos =
                     new BlockPos(
                     region.getCenterPos().getStartX(),
@@ -98,7 +98,7 @@ public class ChunkGenerator extends NoiseChunkGenerator {
                             region.getHeight(),
                             chunk.getPos().getStartZ() + 15));
             }
-        }
+
 
 
     @Override

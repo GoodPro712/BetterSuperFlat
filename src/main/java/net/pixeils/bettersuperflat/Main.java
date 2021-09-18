@@ -7,6 +7,7 @@ import net.minecraft.util.registry.Registry;
 import net.pixeils.bettersuperflat.gen.ChunkGenerator;
 import net.pixeils.bettersuperflat.gen.GenerationSettings;
 
+
 public class Main implements ModInitializer {
 
   @Override
@@ -14,6 +15,4 @@ public class Main implements ModInitializer {
     Registry.register(
         Registry.CHUNK_GENERATOR, GenerationSettings.NAME, ChunkGenerator.CODEC);
   }
-
-
 }
