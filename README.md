@@ -1,7 +1,7 @@
 ## Better Super Flat
 
 ### Usage SinglePlayer:
-Select the `BetterSuperFlat`generation option in the create world screen.
+Select the `BetterSuperFlat` generation option in the create world screen.
 
 
 ### Usage Multiplayer:
